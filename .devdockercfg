@@ -1,0 +1,10 @@
+# This is a python code snippet that evaluates to a dictionary.
+# We use this dictionary to represent the devdocker config file.
+{
+  "registry": "registry.hub.docker.com",
+  "imageName": "priyendra/devdocker-react-tutorial",
+  "imageVersion": "v1.0",
+  "containerName": "devdocker-react-tutorial",
+  "dockerFile": "devdocker/Dockerfile",
+  'ports' : [ '0.0.0.0:3000:3000/tcp' ]
+}
