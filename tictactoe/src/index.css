@@ -49,3 +49,6 @@ ol, ul {
   margin-left: 20px;
 }
 
+.current-move {
+  font-weight: bold;
+}
