@@ -82,6 +82,10 @@ class Game extends React.Component {
       winnerSymbol = winner.symbol;
       winningSquares = winner.squares;
       status = 'Winner: ' + winnerSymbol;
+    } else if (this.state.stepNumber == 9) {
+      winnerSymbol = null;
+      winningSquares = null;
+      status = 'Game drawn';
     } else {
       winnerSymbol = null;
       winningSquares = null;
