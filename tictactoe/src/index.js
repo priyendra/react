@@ -82,6 +82,7 @@ class MoveList extends React.Component {
         </li>
       );
     });
+    if (this.props.reverse) moves.reverse()
     return <ul>{moves}</ul>
   }
 }
@@ -95,6 +96,7 @@ class Game extends React.Component {
         move: null,
       }],
       stepNumber: 0,
+      reverseHistory: false,
     };
   }
   render() {
@@ -125,7 +127,11 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
+          <button onClick={() => this.toggleMoveOrder()}>
+            Toggle move order
+          </button>
           <MoveList history={this.state.history}
+                    reverse={this.state.reverseHistory}
                     stepNumber={this.state.stepNumber}
                     onClick={(i) => this.jumpTo(i)}/>
         </div>
@@ -155,6 +161,11 @@ class Game extends React.Component {
   jumpTo(step) {
     this.setState({
       stepNumber: step,
+    });
+  }
+  toggleMoveOrder() {
+    this.setState({
+      reverseHistory: !this.state.reverseHistory,
     });
   }
 }
