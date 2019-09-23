@@ -2,9 +2,9 @@
 # We use this dictionary to represent the devdocker config file.
 {
   "registry": "registry.hub.docker.com",
-  "imageName": "priyendra/devdocker-react-tutorial",
+  "imageName": "priyendra/devdocker-react",
   "imageVersion": "v1.0",
-  "containerName": "devdocker-react-tutorial",
+  "containerName": "devdocker-react",
   "dockerFile": "devdocker/Dockerfile",
   'ports' : [ '0.0.0.0:3000:3000/tcp' ]
 }
